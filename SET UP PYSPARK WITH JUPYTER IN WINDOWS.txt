@@ -1,0 +1,59 @@
+RUN PYSPARK IN JUPYTER NOTEBOOK:
+
+
+############################################ IN WINDOWS###############################
+Download spark and extract it into a folder (C:/spark is my folder)
+Download and install jupyter notebook(if you do not have)
+
+##########################################################
+SET ENVIRONMENT VARIABLES:
+
+SPARK_HOME 
+C:/spark/spark-3.0.0-preview2-bin-hadoop2.7
+
+HADOOP_HOME
+C:/spark/spark-3.0.0-preview2-bin-hadoop2.7
+
+SET PATH
+C:/spark/spark-3.0.0-preview2-bin-hadoop2.7/bin
+
+to run pyspark from jupyter SET DRIVERS
+
+set PYSPARK_DRIVER_PYTHON=jupyter
+
+set PYSPARK_DRIVER_PYTHON_OPTS='notebook'
+
+#######################################################################
+Better way: using command line
+
+SET ENVIRONMENT VARIABLES 
+
+setx SPARK_HOME C:/spark/spark-3.0.0-preview2-bin-hadoop2.7
+setx HADOOP_HOME C:/spark/spark-3.0.0-preview2-bin-hadoop2.7
+
+setx PATH C:/spark/spark-3.0.0-preview2-bin-hadoop2.7/graphframes.zip
+
+
+pyspark --packages graphframes:graphframes:0.8.0-spark3.0-s_2.12
+
+SET DRIVERS
+
+setx PYSPARK_DRIVER_PYTHON ipython
+setx PYSPARK_DRIVER_PYTHON_OPTS notebook
+####################################################################
+
+CLOSE command line and reopen it
+
+Go To C:/spark/spark-3.0.0-preview2-bin-hadoop2.7/bin
+
+type pySpark
+
+..........................you will see its open in jupyter notebook
+
+
+#################################################################################3
+For graphX
+set path
+C:\Users\mayam\Downloads\graphframes-0.8.0-spark3.0-s_2.12
+
+pyspark --packages graphframes:graphframes:0.8.0-spark3.0-s_2.
